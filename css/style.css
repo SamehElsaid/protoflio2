@@ -1,0 +1,420 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: #EE8683;
+    --sec-color: #6c757d;
+}
+
+.bg-sec {
+    background: #f8f9fa;
+    overflow: hidden;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+p {
+    font-family: 'Nunito', sans-serif;
+    color: var(--sec-color);
+    font-size: 20px;
+}
+
+img {
+    width: 100%;
+}
+
+section {
+    padding: 70px 0;
+    overflow: hidden;
+}
+
+/* Start Header */
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: .5s linear;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: .5s linear;
+    background-color: white;
+    box-shadow: 0px -3px 10px var(--sec-color);
+    z-index: 11;
+}
+
+.sticky a {
+    color: #333 !important;
+    padding: 25px 16px !important;
+}
+
+.sticky .navbar-toggler i {
+    color: #333;
+}
+
+header {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/background.jpg);
+    background-size: cover;
+}
+
+/* .navbar-collapse.show {
+    /* background-color: #333;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 100%; */
+/* .navbar-collapse.show {
+    background-color: white;
+} */
+
+.navbar-toggler i {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none
+}
+
+
+.navbar-collapse {
+    background-color: white;
+
+}
+
+.navbar-collapse a {
+    color: #333 !important;
+}
+
+@media screen and (min-width: 992px) {
+    .navbar-expand-lg .navbar-collapse {
+        background-color: transparent;
+    }
+
+    .navbar-collapse a {
+        color: white !important;
+    }
+
+    .sticky a {
+        color: #333 !important;
+        padding: 25px 16px !important;
+    }
+}
+
+.nav-item .active {
+    color: var(--main-color) !important;
+}
+
+.nav-item a:hover {
+    color: var(--main-color) !important;
+}
+
+.element {
+    color: var(--main-color);
+}
+
+.btn-info:hover {
+    background-color: white !important;
+    color: var(--main-color) !important;
+}
+
+/* End Header */
+/* Start About */
+.profile {
+    border: 1px solid #dee2e6;
+    padding: 5px;
+}
+
+.text span {
+    color: var(--main-color);
+}
+
+.icon {
+    border: 2px solid #6c757d50;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    transition: .5s linear;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.icon:hover {
+    color: var(--main-color);
+}
+
+/* End About */
+/* Start Skill */
+.skill h2 {
+    font-size: 20px;
+}
+
+.skill:not(:first-of-type) {
+    margin-top: 20px !important;
+}
+
+.skill span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 10px;
+    background: #e9ecef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    font-weight: bold;
+    overflow: hidden;
+    color: white;
+}
+
+.skill span h3 {
+    position: relative;
+    z-index: 1;
+    font-size: 10px;
+    margin: 0;
+}
+
+.skill span .pars {
+    position: absolute;
+    top: 0;
+    background-color: var(--main-color);
+    height: 100%;
+    border-radius: 20px;
+    left: 0;
+    transition: 1s linear;
+    width: 0;
+    opacity: 0;
+}
+
+.animation .pars {
+    animation: feadIn 1s linear;
+    transition: 1s linear;
+    opacity: 1 !important;
+}
+
+@keyframes feadIn {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(-0%);
+    }
+}
+
+
+/* End Skill */
+/* Start Services */
+.boxServices {
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, .125);
+    padding: 20px;
+}
+
+.boxServices i {
+    font-size: 3rem;
+}
+
+.boxServices h3 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.boxServices h3 span {
+    transition: .5s linear;
+    display: block;
+    margin: auto;
+    width: 15%;
+    height: 2px;
+    margin-top: 15px;
+    background-color: var(--main-color);
+}
+
+.boxServices h3:hover span {
+    width: 30%;
+}
+
+.boxServices p {
+    font-size: 16px;
+    line-height: 2;
+}
+
+/* End Services */
+/* Hire Me Start */
+.btn-danger {
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+    margin-top: 20px;
+}
+
+/* Hire Me End */
+/* Testimony Start */
+.testimony {
+    padding: 70px;
+}
+
+.owl-item i {
+    color: var(--sec-color);
+}
+
+.imgItems {
+    margin: 30px auto;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.fs-6 {
+    font-size: 11px !important;
+    margin-bottom: 40px;
+}
+
+.owl-nav {
+    display: none;
+}
+
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+    background-color: var(--main-color);
+}
+
+/* Testimony End */
+/* Work Start */
+.filter-container {
+    gap: 50px 0 !important;
+}
+
+.filtr-item {
+    display: flex;
+    overflow: hidden;
+}
+
+.filtr-item img {
+    margin-top: 20px !important;
+}
+
+/* Work End */
+/* Footer Start */
+footer {
+    background: #333;
+    padding: 70px 0;
+    text-align: center;
+}
+
+footer .linkes {
+    margin-bottom: 15px;
+}
+
+footer .linkes i {
+    color: var(--sec-color);
+    transition: .5s linear;
+}
+
+footer .linkes i:hover {
+    color: var(--main-color);
+}
+
+/* Footer End */
+/*  */
+.popUp {
+    position: fixed;
+    inset: 0;
+    z-index: 111;
+}
+
+.anination.popUp {
+    visibility: hidden;
+}
+
+.popTop {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    background-color: #333;
+    transition: 1s linear;
+}
+
+.popbottom {
+    transition: 1s linear;
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    bottom: 0;
+    background-color: #333;
+}
+
+.anination .popTop {
+    opacity: 1;
+    transform: translateY(-100%);
+}
+
+.anination .popbottom {
+    transform: translateY(100%);
+}
+
+.loading {
+    background-color: transparent;
+    border: 10px solid #EE8683;
+    border-color: #EE8683 var(--sec-color) var(--sec-color);
+    height: 120px;
+    width: 120px;
+    z-index: 11;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transition: 1s linear;
+    left: 50%;
+    animation: circle 2s linear infinite;
+}
+
+.anination .loading {
+    opacity: 0;
+}
+
+.load {
+    background-color: transparent;
+    height: 100px;
+    width: 100px;
+    z-index: 10;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes circle {
+    0% {
+        transform: translate(-50%, -50%) rotate(0);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/*  */
